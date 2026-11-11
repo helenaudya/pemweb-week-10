@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Library</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo-icon">📚</div>
+        <h2>Mini Library</h2>
+        <p>Manajemen Daftar Buku Sederhana</p>
+    </div>
+    
+    <!-- Form untuk POST dan PUT -->
+    <div class="card form-card">
+        <h3 class="card-title">✏️ Data Buku</h3>
+        <form id="bookForm">
+            <input type="hidden" id="bookId">
+            <div class="input-group">
+                <input type="text" id="judul" placeholder="Masukkan Judul Buku" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="penulis" placeholder="Nama Penulis" required>
+            </div>
+            <button type="submit" id="submitBtn" class="btn-primary">Tambah Buku</button>
+        </form>
+    </div>
+
+    <!-- Tabel untuk GET -->
+    <div class="card table-card">
+        <h3 class="card-title">📖 Daftar Buku</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">ID</th>
+                    <th style="width: 40%;">Judul Buku</th>
+                    <th style="width: 30%;">Penulis</th>
+                    <th style="width: 20%; text-align: center;">Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="bookTableBody">
+                <!-- Data akan dirender di sini oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Menghubungkan file JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
